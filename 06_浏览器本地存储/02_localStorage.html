@@ -18,8 +18,23 @@
   let btn3 = document.getElementById('btn3')
   let btn4 = document.getElementById('btn4')
 
-  let person1 = {name:'wade',age:41}
-  let person2 = {name:'kobe',age:40}
+  let p1 = {name:'tom',age:18}
+  btn1.onclick = ()=>{
+    localStorage.setItem('person1',JSON.stringify(p1))
+  }
+
+  btn2.onclick = ()=>{
+    let result = localStorage.getItem('person1')
+    console.log(JSON.parse(result))
+  }
+
+  btn3.onclick = ()=>{
+    localStorage.removeItem('person1')
+  }
+
+  btn4.onclick = ()=>{
+    localStorage.clear()
+  }
 
 
 </script>

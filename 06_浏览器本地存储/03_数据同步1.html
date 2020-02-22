@@ -20,9 +20,9 @@
         需求：修改一个页面的数据，另一个页面能够及时响应，如：电商网站的多个页面之间如何通信
     * */
 
-    let input = document.getElementById('input')
-    input.onblur = ()=>{
-      sessionStorage.setItem('demo',input.value)
+    let inputNode = document.getElementById('input')
+    inputNode.onblur = ()=>{
+      localStorage.setItem('data',inputNode.value)
     }
 
 </script>
