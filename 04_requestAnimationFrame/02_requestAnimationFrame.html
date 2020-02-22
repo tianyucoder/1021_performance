@@ -23,6 +23,21 @@
 <!--requestAnimationFrame动画.html-->
 <script type="text/javascript">
 
+  let test = document.getElementById('test')
+  let index = 0
+  let tag
+  function move() {
+    index++
+    test.style.transform = `translateX(${index}px)`
+    tag = requestAnimationFrame(move)
+  }
+
+  tag = requestAnimationFrame(move)
+
+  setTimeout(()=>{
+    cancelAnimationFrame(tag)
+  },2000)
+
 </script>
 </body>
 </html>
